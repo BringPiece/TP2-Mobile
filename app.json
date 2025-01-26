@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "8c6f8164-db15-4de7-9b3d-9371b5887f35"
+      }
+    },
+    "owner": "franonym7code",
+    "android": {
+      "package": "com.franonym7code.tp2mobileprograming"
+    }
+  }
+}
