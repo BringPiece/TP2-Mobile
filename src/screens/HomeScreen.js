@@ -6,25 +6,27 @@ const { width } = Dimensions.get("window");
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#FFEFBA", "#FFFFFF"]}
+      style={styles.container}>
       <Image
         source={{
-          uri: "https://indodax.com/v2/logo/png/color/btc.png",
+          uri: "https://img.freepik.com/premium-vector/background-e-commerce-elements-flat-design_23-2147669145.jpg",
         }}
         style={styles.logo}
       />
-      <Text style={styles.title}>Welcome to Crypto App</Text>
-      <Text style={styles.subtitle}>Discover crypto to know new world.</Text>
+      <Text style={styles.title}>Welcome to Ecommerce App</Text>
+      <Text style={styles.subtitle}>Discover exclusive products and shop the latest trends!</Text>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => navigation.navigate("ListScreen")}>
         <LinearGradient
-          colors={["#FF7043", "#FF3E80"]}
+          colors={["#FF7E5F", "#FEB47B"]}
           style={styles.button}>
-          <Text style={styles.buttonText}>Explore Cryptos</Text>
+          <Text style={styles.buttonText}>Explore Products</Text>
         </LinearGradient>
       </TouchableOpacity>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -33,44 +35,47 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FFF",
     padding: 20,
   },
   logo: {
-    width: width * 0.7, // Adjusted for better responsiveness
+    width: width * 0.5,
     height: width * 0.5,
-    marginBottom: 30,
-    borderRadius: 10,
+    marginBottom: 40,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: "#FF7E5F",
   },
   title: {
-    fontSize: 26,
+    fontSize: 28,
     fontWeight: "bold",
-    color: "#222",
+    color: "#333",
     marginBottom: 10,
     textAlign: "center",
+    letterSpacing: 1,
   },
   subtitle: {
     fontSize: 16,
-    color: "#555",
+    color: "#666",
     textAlign: "center",
-    marginBottom: 30,
+    marginBottom: 40,
     lineHeight: 24,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
   },
   button: {
     paddingVertical: 15,
-    paddingHorizontal: 60,
+    paddingHorizontal: 70,
     borderRadius: 30,
-    shadowColor: "#FF3E80",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 5, // For Android shadow
+    shadowColor: "#FF7E5F",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.25,
+    shadowRadius: 10,
+    elevation: 5,
   },
   buttonText: {
     color: "#FFF",
     fontSize: 18,
-    fontWeight: "600",
+    fontWeight: "700",
     textAlign: "center",
+    letterSpacing: 0.5,
   },
 });

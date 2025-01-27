@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { View, Text, StyleSheet, Animated } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
 export default function SplashScreen({ navigation }) {
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -15,9 +16,11 @@ export default function SplashScreen({ navigation }) {
   }, [fadeAnim, navigation]);
 
   return (
-    <View style={styles.container}>
-      <Animated.Text style={[styles.title, { opacity: fadeAnim }]}>Cryptos App</Animated.Text>
-    </View>
+    <LinearGradient
+      colors={["#0D47A1", "#42A5F5"]} // Elegant gradient from deep blue to light blue
+      style={styles.container}>
+      <Animated.Text style={[styles.title, { opacity: fadeAnim }]}>Ecommerce App</Animated.Text>
+    </LinearGradient>
   );
 }
 
@@ -26,11 +29,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FFA726",
   },
   title: {
-    fontSize: 40,
+    fontSize: 42,
     fontWeight: "bold",
-    color: "white",
+    color: "#FFD700", // Gold for a luxurious feel
+    textShadowColor: "rgba(0, 0, 0, 0.3)", // Subtle text shadow for depth
+    textShadowOffset: { width: 1, height: 2 },
+    textShadowRadius: 5,
   },
 });
