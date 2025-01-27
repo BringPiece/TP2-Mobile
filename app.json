@@ -1,5 +1,13 @@
 {
   "expo": {
+    "name": "Ecommerce App",
+    "slug": "tp2-ecomapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "web": {
+      "favicon": "./assets/favicon.ico"
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
