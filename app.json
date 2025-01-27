@@ -2,12 +2,9 @@
   "expo": {
     "extra": {
       "eas": {
-        "projectId": "8c6f8164-db15-4de7-9b3d-9371b5887f35"
+        "projectId": "9d6cacc9-0e18-4c43-a45c-ae1f481e07b6"
       }
     },
-    "owner": "franonym7code",
-    "android": {
-      "package": "com.franonym7code.tp2mobileprograming"
-    }
+    "owner": "franonymcode"
   }
 }

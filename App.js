@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"; // Import Icon
 import SplashScreen from "./src/screens/SplashScreen";
 import ListScreen from "./src/screens/ListScreen";
 import DetailScreen from "./src/screens/DetailScreen";
@@ -38,11 +39,20 @@ export default function App() {
             headerRight: () => (
               <TouchableOpacity
                 onPress={() => navigation.navigate("CartScreen")}
-                style={{ marginRight: 20 }}>
-                <Text style={{ fontSize: 18, color: "#FF7043" }}>Cart ({cart.length})</Text>
+                style={{ marginRight: 20 }}
+              >
+                <View style={styles.cartContainer}>
+                  <Icon
+                    name="cart"
+                    size={24}
+                    color="#A88905"
+                  />
+                  <Text style={styles.cartText}>{cart.length} Items</Text>
+                </View>
               </TouchableOpacity>
             ),
-          })}>
+          })}
+        >
           {(props) => (
             <ListScreen
               {...props}
@@ -73,3 +83,15 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  cartContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  cartText: {
+    fontSize: 14,
+    color: "#A88905", // Cart text color
+    marginLeft: 5,
+  },
+});
