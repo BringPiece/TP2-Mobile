@@ -5,6 +5,9 @@
         "projectId": "9d6cacc9-0e18-4c43-a45c-ae1f481e07b6"
       }
     },
-    "owner": "franonymcode"
+    "owner": "franonymcode",
+    "android": {
+      "package": "com.franonymcode.tp2ecomapp"
+    }
   }
 }
