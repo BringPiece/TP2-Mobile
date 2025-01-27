@@ -7,12 +7,12 @@
     },
     "extra": {
       "eas": {
-        "projectId": "9d6cacc9-0e18-4c43-a45c-ae1f481e07b6"
+        "projectId": "ec0196e2-72f4-44e3-b62b-f1aa13a5737d"
       }
     },
-    "owner": "franonymcode",
+    "owner": "frans7",
     "android": {
-      "package": "com.franonymcode.tp2ecomapp"
+      "package": "com.frans7.tp2ecomapp"
     }
   }
 }
